@@ -1,0 +1,16 @@
+release/admin_dashboard.o
+release/forgetpasswordbutton.o
+release/main.o
+release/mainwindow.o
+release/managestudent.o
+release/mycourses.o
+release/student_attendance.o
+release/studentportal.o
+release/qrc_logos.o
+release/moc_admin_dashboard.o
+release/moc_forgetpasswordbutton.o
+release/moc_mainwindow.o
+release/moc_managestudent.o
+release/moc_mycourses.o
+release/moc_student_attendance.o
+release/moc_studentportal.o

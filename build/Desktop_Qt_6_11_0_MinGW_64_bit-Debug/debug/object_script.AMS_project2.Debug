@@ -1,0 +1,16 @@
+debug/admin_dashboard.o
+debug/forgetpasswordbutton.o
+debug/main.o
+debug/mainwindow.o
+debug/managestudent.o
+debug/mycourses.o
+debug/student_attendance.o
+debug/studentportal.o
+debug/qrc_logos.o
+debug/moc_admin_dashboard.o
+debug/moc_forgetpasswordbutton.o
+debug/moc_mainwindow.o
+debug/moc_managestudent.o
+debug/moc_mycourses.o
+debug/moc_student_attendance.o
+debug/moc_studentportal.o
