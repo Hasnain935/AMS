@@ -35,12 +35,10 @@ public:
     QLabel *label;
     QLabel *label_2;
     QPushButton *pushButton;
-    QLabel *label_3;
-    QPushButton *pushButton_2;
-    QLabel *label_8;
     QPushButton *pushButton_3;
+    QLabel *label_3;
+    QLabel *label_8;
     QLabel *label_11;
-    QPushButton *pushButton_4;
     QLabel *label_4;
     QLabel *label_5;
     QLabel *label_6;
@@ -52,6 +50,14 @@ public:
     QVBoxLayout *verticalLayout_2;
     QLabel *label_7;
     QLabel *label_12;
+    QHBoxLayout *horizontalLayout_3;
+    QLabel *label_26;
+    QLabel *label_25;
+    QLabel *label_22;
+    QLabel *label_20;
+    QLabel *label_13;
+    QLabel *label_14;
+    QLabel *label_19;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_23;
     QLabel *lblCGPAValue;
@@ -111,24 +117,6 @@ public:
 
         verticalLayout->addWidget(pushButton);
 
-        label_3 = new QLabel(frame);
-        label_3->setObjectName("label_3");
-
-        verticalLayout->addWidget(label_3);
-
-        pushButton_2 = new QPushButton(frame);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setFont(font1);
-        pushButton_2->setStyleSheet(QString::fromUtf8("background-color: rgb(0,53,77);\n"
-"color:rgb(255, 255, 255)"));
-
-        verticalLayout->addWidget(pushButton_2);
-
-        label_8 = new QLabel(frame);
-        label_8->setObjectName("label_8");
-
-        verticalLayout->addWidget(label_8);
-
         pushButton_3 = new QPushButton(frame);
         pushButton_3->setObjectName("pushButton_3");
         pushButton_3->setFont(font1);
@@ -137,18 +125,20 @@ public:
 
         verticalLayout->addWidget(pushButton_3);
 
+        label_3 = new QLabel(frame);
+        label_3->setObjectName("label_3");
+
+        verticalLayout->addWidget(label_3);
+
+        label_8 = new QLabel(frame);
+        label_8->setObjectName("label_8");
+
+        verticalLayout->addWidget(label_8);
+
         label_11 = new QLabel(frame);
         label_11->setObjectName("label_11");
 
         verticalLayout->addWidget(label_11);
-
-        pushButton_4 = new QPushButton(frame);
-        pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setFont(font1);
-        pushButton_4->setStyleSheet(QString::fromUtf8("background-color: rgb(0,53,77);\n"
-"color:rgb(255, 255, 255)"));
-
-        verticalLayout->addWidget(pushButton_4);
 
         label_4 = new QLabel(frame);
         label_4->setObjectName("label_4");
@@ -211,6 +201,55 @@ public:
 
         verticalLayout_2->addWidget(label_12);
 
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName("horizontalLayout_3");
+        label_26 = new QLabel(frame_2);
+        label_26->setObjectName("label_26");
+
+        horizontalLayout_3->addWidget(label_26);
+
+        label_25 = new QLabel(frame_2);
+        label_25->setObjectName("label_25");
+        QFont font3;
+        font3.setPointSize(14);
+        font3.setBold(true);
+        label_25->setFont(font3);
+        label_25->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        horizontalLayout_3->addWidget(label_25);
+
+        label_22 = new QLabel(frame_2);
+        label_22->setObjectName("label_22");
+
+        horizontalLayout_3->addWidget(label_22);
+
+        label_20 = new QLabel(frame_2);
+        label_20->setObjectName("label_20");
+        label_20->setFont(font3);
+        label_20->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        horizontalLayout_3->addWidget(label_20);
+
+        label_13 = new QLabel(frame_2);
+        label_13->setObjectName("label_13");
+
+        horizontalLayout_3->addWidget(label_13);
+
+        label_14 = new QLabel(frame_2);
+        label_14->setObjectName("label_14");
+        label_14->setFont(font3);
+        label_14->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        horizontalLayout_3->addWidget(label_14);
+
+        label_19 = new QLabel(frame_2);
+        label_19->setObjectName("label_19");
+
+        horizontalLayout_3->addWidget(label_19);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_3);
+
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
         label_23 = new QLabel(frame_2);
@@ -221,9 +260,6 @@ public:
         lblCGPAValue = new QLabel(frame_2);
         lblCGPAValue->setObjectName("lblCGPAValue");
         lblCGPAValue->setMaximumSize(QSize(500, 500));
-        QFont font3;
-        font3.setPointSize(16);
-        font3.setBold(true);
         lblCGPAValue->setFont(font3);
         lblCGPAValue->setStyleSheet(QString::fromUtf8("border-radius:20px;\n"
 "background-color: rgb(223, 223, 223);"));
@@ -271,10 +307,7 @@ public:
 
         label_17 = new QLabel(frame_2);
         label_17->setObjectName("label_17");
-        QFont font4;
-        font4.setPointSize(14);
-        font4.setBold(true);
-        label_17->setFont(font4);
+        label_17->setFont(font3);
 
         verticalLayout_2->addWidget(label_17);
 
@@ -307,12 +340,10 @@ public:
         label->setText(QCoreApplication::translate("Dashboard", "STUDENT PORTAL", nullptr));
         label_2->setText(QString());
         pushButton->setText(QCoreApplication::translate("Dashboard", "MY PROFILE", nullptr));
-        label_3->setText(QString());
-        pushButton_2->setText(QCoreApplication::translate("Dashboard", "EXAM", nullptr));
-        label_8->setText(QString());
         pushButton_3->setText(QCoreApplication::translate("Dashboard", "ATTENDANCE", nullptr));
+        label_3->setText(QString());
+        label_8->setText(QString());
         label_11->setText(QString());
-        pushButton_4->setText(QCoreApplication::translate("Dashboard", "MY COURSES", nullptr));
         label_4->setText(QString());
         label_5->setText(QString());
         label_6->setText(QString());
@@ -322,12 +353,19 @@ public:
         label_10->setText(QString());
         label_7->setText(QCoreApplication::translate("Dashboard", "WELCOME BACK!", nullptr));
         label_12->setText(QCoreApplication::translate("Dashboard", "Here's Whats Happening with your journey!", nullptr));
+        label_26->setText(QString());
+        label_25->setText(QCoreApplication::translate("Dashboard", "CGPA", nullptr));
+        label_22->setText(QString());
+        label_20->setText(QCoreApplication::translate("Dashboard", "ASSIGNMENTS", nullptr));
+        label_13->setText(QString());
+        label_14->setText(QCoreApplication::translate("Dashboard", "ATTENDANCE", nullptr));
+        label_19->setText(QString());
         label_23->setText(QString());
-        lblCGPAValue->setText(QCoreApplication::translate("Dashboard", "CGPA", nullptr));
+        lblCGPAValue->setText(QString());
         label_21->setText(QString());
-        lblassignmentcount->setText(QCoreApplication::translate("Dashboard", "Assignment", nullptr));
+        lblassignmentcount->setText(QString());
         label_18->setText(QString());
-        lblattendancecount->setText(QCoreApplication::translate("Dashboard", "Attendance", nullptr));
+        lblattendancecount->setText(QString());
         label_24->setText(QString());
         label_17->setText(QCoreApplication::translate("Dashboard", "Your Time Table", nullptr));
     } // retranslateUi

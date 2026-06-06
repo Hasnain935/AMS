@@ -34,15 +34,15 @@ public:
     QFrame *frame_2;
     QVBoxLayout *verticalLayout_3;
     QHBoxLayout *horizontalLayout_2;
-    QLabel *label_3;
-    QLabel *label_6;
-    QLabel *label_4;
-    QLabel *label_5;
+    QLabel *lblcourse1;
+    QLabel *lblcourse2;
+    QLabel *lblcourse3;
+    QLabel *lblcourse4;
     QHBoxLayout *horizontalLayout;
-    QLabel *label_7;
-    QLabel *label_9;
-    QLabel *label_8;
-    QLabel *label_10;
+    QLabel *lblcourse5;
+    QLabel *lblcourse6;
+    QLabel *lblcourse7;
+    QLabel *lblcourse8;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -93,66 +93,85 @@ public:
         verticalLayout_3->setObjectName("verticalLayout_3");
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
-        label_3 = new QLabel(frame_2);
-        label_3->setObjectName("label_3");
-        label_3->setStyleSheet(QString::fromUtf8("border-radius:20px;\n"
+        lblcourse1 = new QLabel(frame_2);
+        lblcourse1->setObjectName("lblcourse1");
+        QFont font1;
+        font1.setPointSize(14);
+        font1.setBold(true);
+        lblcourse1->setFont(font1);
+        lblcourse1->setStyleSheet(QString::fromUtf8("border-radius:20px;\n"
 "background-color: rgb(232, 232, 232);"));
+        lblcourse1->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        horizontalLayout_2->addWidget(label_3);
+        horizontalLayout_2->addWidget(lblcourse1);
 
-        label_6 = new QLabel(frame_2);
-        label_6->setObjectName("label_6");
-        label_6->setStyleSheet(QString::fromUtf8("border-radius:20px;\n"
+        lblcourse2 = new QLabel(frame_2);
+        lblcourse2->setObjectName("lblcourse2");
+        lblcourse2->setFont(font1);
+        lblcourse2->setStyleSheet(QString::fromUtf8("border-radius:20px;\n"
 "background-color: rgb(232, 232, 232);"));
+        lblcourse2->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        horizontalLayout_2->addWidget(label_6);
+        horizontalLayout_2->addWidget(lblcourse2);
 
-        label_4 = new QLabel(frame_2);
-        label_4->setObjectName("label_4");
-        label_4->setStyleSheet(QString::fromUtf8("border-radius:20px;\n"
+        lblcourse3 = new QLabel(frame_2);
+        lblcourse3->setObjectName("lblcourse3");
+        lblcourse3->setFont(font1);
+        lblcourse3->setStyleSheet(QString::fromUtf8("border-radius:20px;\n"
 "background-color: rgb(232, 232, 232);"));
+        lblcourse3->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        horizontalLayout_2->addWidget(label_4);
+        horizontalLayout_2->addWidget(lblcourse3);
 
-        label_5 = new QLabel(frame_2);
-        label_5->setObjectName("label_5");
-        label_5->setStyleSheet(QString::fromUtf8("border-radius:20px;\n"
+        lblcourse4 = new QLabel(frame_2);
+        lblcourse4->setObjectName("lblcourse4");
+        lblcourse4->setFont(font1);
+        lblcourse4->setStyleSheet(QString::fromUtf8("border-radius:20px;\n"
 "background-color: rgb(232, 232, 232);"));
+        lblcourse4->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        horizontalLayout_2->addWidget(label_5);
+        horizontalLayout_2->addWidget(lblcourse4);
 
 
         verticalLayout_3->addLayout(horizontalLayout_2);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
-        label_7 = new QLabel(frame_2);
-        label_7->setObjectName("label_7");
-        label_7->setStyleSheet(QString::fromUtf8("border-radius:20px;\n"
+        lblcourse5 = new QLabel(frame_2);
+        lblcourse5->setObjectName("lblcourse5");
+        lblcourse5->setFont(font1);
+        lblcourse5->setStyleSheet(QString::fromUtf8("border-radius:20px;\n"
 "background-color: rgb(232, 232, 232);"));
+        lblcourse5->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        horizontalLayout->addWidget(label_7);
+        horizontalLayout->addWidget(lblcourse5);
 
-        label_9 = new QLabel(frame_2);
-        label_9->setObjectName("label_9");
-        label_9->setStyleSheet(QString::fromUtf8("border-radius:20px;\n"
+        lblcourse6 = new QLabel(frame_2);
+        lblcourse6->setObjectName("lblcourse6");
+        lblcourse6->setFont(font1);
+        lblcourse6->setStyleSheet(QString::fromUtf8("border-radius:20px;\n"
 "background-color: rgb(232, 232, 232);"));
+        lblcourse6->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        horizontalLayout->addWidget(label_9);
+        horizontalLayout->addWidget(lblcourse6);
 
-        label_8 = new QLabel(frame_2);
-        label_8->setObjectName("label_8");
-        label_8->setStyleSheet(QString::fromUtf8("border-radius:20px;\n"
+        lblcourse7 = new QLabel(frame_2);
+        lblcourse7->setObjectName("lblcourse7");
+        lblcourse7->setFont(font1);
+        lblcourse7->setStyleSheet(QString::fromUtf8("border-radius:20px;\n"
 "background-color: rgb(232, 232, 232);"));
+        lblcourse7->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        horizontalLayout->addWidget(label_8);
+        horizontalLayout->addWidget(lblcourse7);
 
-        label_10 = new QLabel(frame_2);
-        label_10->setObjectName("label_10");
-        label_10->setStyleSheet(QString::fromUtf8("border-radius:20px;\n"
+        lblcourse8 = new QLabel(frame_2);
+        lblcourse8->setObjectName("lblcourse8");
+        lblcourse8->setFont(font1);
+        lblcourse8->setStyleSheet(QString::fromUtf8("border-radius:20px;\n"
 "background-color: rgb(232, 232, 232);"));
+        lblcourse8->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        horizontalLayout->addWidget(label_10);
+        horizontalLayout->addWidget(lblcourse8);
 
 
         verticalLayout_3->addLayout(horizontalLayout);
@@ -179,14 +198,14 @@ public:
         mycourses->setWindowTitle(QCoreApplication::translate("mycourses", "MainWindow", nullptr));
         label->setText(QCoreApplication::translate("mycourses", "My Courses", nullptr));
         label_2->setText(QCoreApplication::translate("mycourses", "Here you can check your courses", nullptr));
-        label_3->setText(QCoreApplication::translate("mycourses", "TextLabel", nullptr));
-        label_6->setText(QCoreApplication::translate("mycourses", "TextLabel", nullptr));
-        label_4->setText(QCoreApplication::translate("mycourses", "TextLabel", nullptr));
-        label_5->setText(QCoreApplication::translate("mycourses", "TextLabel", nullptr));
-        label_7->setText(QCoreApplication::translate("mycourses", "TextLabel", nullptr));
-        label_9->setText(QCoreApplication::translate("mycourses", "TextLabel", nullptr));
-        label_8->setText(QCoreApplication::translate("mycourses", "TextLabel", nullptr));
-        label_10->setText(QCoreApplication::translate("mycourses", "TextLabel", nullptr));
+        lblcourse1->setText(QString());
+        lblcourse2->setText(QString());
+        lblcourse3->setText(QString());
+        lblcourse4->setText(QString());
+        lblcourse5->setText(QString());
+        lblcourse6->setText(QString());
+        lblcourse7->setText(QString());
+        lblcourse8->setText(QString());
     } // retranslateUi
 
 };

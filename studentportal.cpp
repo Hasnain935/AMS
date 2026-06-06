@@ -1,7 +1,14 @@
 #include "studentportal.h"
 #include "ui_studentportal.h"
-#include <QHeaderView> // Header resizing ke liye zaroori hai
+#include <QHeaderView>
+#include <QJsonObject>
+#include <QJsonDocument>
+#include <QJsonArray>
 
+
+#include <QString>
+#include <QDebug>
+#include <QListWidget>
 Dashboard::Dashboard(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Dashboard)
@@ -33,41 +40,57 @@ void Dashboard::on_pushButton_3_clicked()
     student_attendance->show();
 }
 
-void Dashboard::on_pushButton_4_clicked()
-{
-    my_courses = new mycourses(this);
-    my_courses->show();
-}
-// Firebase se data mangwane ka function
+
+
 void Dashboard::fetchdashboarddata(){
     QString url = "https://ams-project-ae5d4-default-rtdb.firebaseio.com/students/student1.json";
     QNetworkRequest request((QUrl(url)));
     networkManager->get(request);
 }
 
-// FIX: Yeh poora function aapke code mein gayab tha, isko add kar diya hai
+
 void Dashboard::onFirebaseDataReceived(QNetworkReply *reply)
 {
+    if (!reply) return;
+
     if (reply->error() == QNetworkReply::NoError) {
         QByteArray responseData = reply->readAll();
         QJsonDocument jsonDoc = QJsonDocument::fromJson(responseData);
         QJsonObject jsonObj = jsonDoc.object();
 
-        // Firebase se data nikala
+        // 1. Single Values (CGPA, Attendance, Assignments)
         double cgpa = jsonObj["cgpa"].toDouble();
         int assignments = jsonObj["assignments"].toInt();
         int attendance = jsonObj["attendance"].toInt();
 
-        // UI Labels par data set kiya
-        // NOTE: Agar aapke designer mein labels ke naam alag hain, toh yahan change kar lein
         ui->lblCGPAValue->setText(QString::number(cgpa, 'f', 2));
         ui->lblassignmentcount->setText(QString::number(assignments));
         ui->lblattendancecount->setText(QString("%1%").arg(attendance));
 
-        qDebug() << "Firebase Data Successfully Loaded on Dashboard!";
+        // 2. TIME TABLE (For QTableWidget)
+        if (jsonObj.contains("timetable") && jsonObj["timetable"].isArray()) {
+            QJsonArray timetableArray = jsonObj["timetable"].toArray();
+            ui->timetablewidget->setColumnCount(4);
+            ui->timetablewidget->setRowCount(timetableArray.size());
+
+            QStringList headers;
+            headers << "Day" << "Subject" << "Time" << "Room";
+            ui->timetablewidget->setHorizontalHeaderLabels(headers);
+
+            for (int i = 0; i < timetableArray.size(); ++i) {
+                QJsonObject classSlot = timetableArray[i].toObject();
+                ui->timetablewidget->setItem(i, 0, new QTableWidgetItem(classSlot["day"].toString()));
+                ui->timetablewidget->setItem(i, 1, new QTableWidgetItem(classSlot["subject"].toString()));
+                ui->timetablewidget->setItem(i, 2, new QTableWidgetItem(classSlot["time"].toString()));
+                ui->timetablewidget->setItem(i, 3, new QTableWidgetItem(classSlot["room"].toString()));
+            }
+            ui->timetablewidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+        }
+
+        qDebug() << "Dashboard Data & Timetable Loaded Successfully!";
     }
     else {
-        qDebug() << "Firebase Error:" << reply->errorString();
+        qDebug() << "Dashboard Firebase Error:" << reply->errorString();
     }
 
     reply->deleteLater();

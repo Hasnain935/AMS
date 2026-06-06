@@ -3,7 +3,10 @@
 #include<attendancereport.h>
 #include<managestudent.h>
 #include <QMainWindow>
-
+#include <QMainWindow>
+#include <QNetworkAccessManager> // <-- Cloud data ke liye zaroori header
+#include <QJsonDocument>
+#include <QJsonObject>
 namespace Ui {
 class admin_dashboard;
 }
@@ -27,6 +30,8 @@ private:
     void updatedashboarddata();
     managestudent *m_student;
     void updateDashboardCounters();
+    QNetworkAccessManager *networkManager;
+
 };
 
 #endif // ADMIN_DASHBOARD_H

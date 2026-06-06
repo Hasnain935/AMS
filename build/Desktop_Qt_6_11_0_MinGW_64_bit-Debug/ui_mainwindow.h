@@ -73,7 +73,7 @@ public:
         horizontalLayout_2->setObjectName("horizontalLayout_2");
         frame = new QFrame(widget);
         frame->setObjectName("frame");
-        frame->setStyleSheet(QString::fromUtf8("background-color:rgb(0, 53, 77)"));
+        frame->setStyleSheet(QString::fromUtf8("background-color:rgb(0, 53, 77);"));
         frame->setFrameShape(QFrame::Shape::StyledPanel);
         frame->setFrameShadow(QFrame::Shadow::Raised);
         verticalLayout_2 = new QVBoxLayout(frame);

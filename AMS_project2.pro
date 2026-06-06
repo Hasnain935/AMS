@@ -1,5 +1,6 @@
 QT += widgets
 QT += network
+QT += core gui network
 CONFIG += c++17
 
 # You can make your code fail to compile if it uses deprecated APIs.
@@ -12,7 +13,6 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     managestudent.cpp \
-    mycourses.cpp \
     student_attendance.cpp \
     studentportal.cpp
 
@@ -21,7 +21,6 @@ HEADERS += \
     forgetpasswordbutton.h \
     mainwindow.h \
     managestudent.h \
-    mycourses.h \
     student_attendance.h \
     studentportal.h
 
@@ -30,7 +29,6 @@ FORMS += \
     forgetpasswordbutton.ui \
     mainwindow.ui \
     managestudent.ui \
-    mycourses.ui \
     student_attendance.ui \
     studentportal.ui
 

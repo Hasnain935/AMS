@@ -47,6 +47,14 @@ public:
     QFrame *frame_2;
     QVBoxLayout *verticalLayout_2;
     QLabel *label_20;
+    QHBoxLayout *horizontalLayout_3;
+    QLabel *label_22;
+    QLabel *label_24;
+    QLabel *label_23;
+    QLabel *label_18;
+    QLabel *label_8;
+    QLabel *label;
+    QLabel *label_7;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_15;
     QPushButton *totalstd;
@@ -184,6 +192,56 @@ public:
 
         verticalLayout_2->addWidget(label_20);
 
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName("horizontalLayout_3");
+        label_22 = new QLabel(frame_2);
+        label_22->setObjectName("label_22");
+        label_22->setFont(font);
+
+        horizontalLayout_3->addWidget(label_22);
+
+        label_24 = new QLabel(frame_2);
+        label_24->setObjectName("label_24");
+        label_24->setFont(font);
+        label_24->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        horizontalLayout_3->addWidget(label_24);
+
+        label_23 = new QLabel(frame_2);
+        label_23->setObjectName("label_23");
+        label_23->setFont(font);
+
+        horizontalLayout_3->addWidget(label_23);
+
+        label_18 = new QLabel(frame_2);
+        label_18->setObjectName("label_18");
+        label_18->setFont(font);
+        label_18->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        horizontalLayout_3->addWidget(label_18);
+
+        label_8 = new QLabel(frame_2);
+        label_8->setObjectName("label_8");
+        label_8->setFont(font);
+
+        horizontalLayout_3->addWidget(label_8);
+
+        label = new QLabel(frame_2);
+        label->setObjectName("label");
+        label->setFont(font);
+        label->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        horizontalLayout_3->addWidget(label);
+
+        label_7 = new QLabel(frame_2);
+        label_7->setObjectName("label_7");
+        label_7->setFont(font);
+
+        horizontalLayout_3->addWidget(label_7);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_3);
+
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
         label_15 = new QLabel(frame_2);
@@ -312,12 +370,19 @@ public:
         label_12->setText(QString());
         label_14->setText(QString());
         label_20->setText(QCoreApplication::translate("admin_dashboard", "WELCOME ADMIN!", nullptr));
+        label_22->setText(QString());
+        label_24->setText(QCoreApplication::translate("admin_dashboard", "TOTAL ", nullptr));
+        label_23->setText(QString());
+        label_18->setText(QCoreApplication::translate("admin_dashboard", "PRESENT", nullptr));
+        label_8->setText(QString());
+        label->setText(QCoreApplication::translate("admin_dashboard", "ABSENT", nullptr));
+        label_7->setText(QString());
         label_15->setText(QString());
-        totalstd->setText(QCoreApplication::translate("admin_dashboard", "Total Student", nullptr));
+        totalstd->setText(QString());
         label_19->setText(QString());
-        presentbutton->setText(QCoreApplication::translate("admin_dashboard", "Present", nullptr));
+        presentbutton->setText(QString());
         label_16->setText(QString());
-        absentbutton->setText(QCoreApplication::translate("admin_dashboard", "Absent", nullptr));
+        absentbutton->setText(QString());
         label_17->setText(QString());
         label_21->setText(QCoreApplication::translate("admin_dashboard", "Student List", nullptr));
         savechanges->setText(QCoreApplication::translate("admin_dashboard", "Save Changes", nullptr));
